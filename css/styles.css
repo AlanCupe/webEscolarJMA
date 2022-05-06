@@ -1,0 +1,699 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: "bebasneue";
+    src: url('../assets/fonts/BebasNeue-Regular.ttf');
+}
+#website {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 10px;
+}
+#header {
+    grid-column: 1/2;
+    height: 100px;
+    box-shadow: 0px 30px 5px rgb(231, 227, 227);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    height: 100%;
+    justify-content: baseline;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 20%;
+}
+.logo__imagen {
+    max-height: 100px;
+    cursor: pointer;
+}
+.logo__imagen img {
+    max-width: 100px;
+    object-fit: cover;
+}
+.logo__titulo h1 {
+    font-size: 2.7rem;
+    font-family: "bebasneue";
+    letter-spacing: 2px;
+    color: rgb(0, 132, 255);
+    text-shadow: 1px 1px 0px rgb(0, 0, 0);
+    cursor: pointer;
+}
+#menu__navegacion {
+
+    flex-grow: 1;
+    flex-basis: 40%;
+}
+#menu__navegacion ul {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    column-gap: 30px;
+    font-family: "bebasneue";
+    list-style: none;
+}
+#menu__navegacion li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(0, 132, 255);
+    transition: all 300ms;
+}
+
+#menu__navegacion ul li:hover {
+    transform: scale(1.3);
+}
+@media (max-width:1412px) {
+    #header {
+       
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+    .logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+#menu__navegacion {
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+#menu__navegacion {
+    flex-grow: 0;
+    flex-basis: 20%;
+}
+}
+#btn-menu{
+    display: none;
+    }
+#icon-hambur{
+    display: none;
+}
+@media (max-width:650px){
+    #icon-hambur{
+        margin-top: 60px;
+        margin-right: 20px;
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+    #menu__navegacion{
+        display: none;
+    }
+    #menu__navegacion ul{
+        z-index: 100;
+      position: absolute;
+      right:  0;
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+    }
+    #menu__navegacion li{
+        padding: 20px;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        width: 100%;
+    }
+    #menu__navegacion li:hover a{
+        color: gold;
+    }
+    #btn-menu:checked ~ #menu__navegacion{
+        display: flex;
+    }
+    .logo {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    }
+    @media (max-width:520px){
+        .logo__titulo h1{
+        font-size:2.3rem ;
+     }
+     #icon-hambur{
+        top:0;
+        margin-right: 20px;
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+    }
+.contenido {
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: repeat(7,auto);
+    }
+
+.contenido h2 {
+    grid-column: 1/5;
+    place-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(255, 234, 0);
+    text-shadow: 2px 2px 5px rgb(125, 175, 255);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.presentacion {
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.presentacion__description {
+    margin: 20px auto;
+    text-align: justify;
+    line-height: 2rem;
+    width: 400px;
+}
+.description__bienvenida {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    color: rgb(0, 132, 255);
+    margin-bottom: 20px;
+}
+.presentacion_img img {
+    width: 100%;
+}
+.cards {
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%),0.25fr));
+    grid-auto-flow: dense;
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 4px gray;
+    border-radius: 16px;
+    max-height: 300px;
+}
+.card__img {
+    width: 100%;
+}
+.card__img img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.card__description {
+    text-align: justify;
+    padding: 20px;
+}
+.modulos {
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(490px, 100%), 500px));
+    gap: 60px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    
+}
+.modulos__card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 4px gray;
+    overflow: hidden;
+    height: auto;
+    border-radius:1rem ;
+}
+.modulos__img {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid blue;
+}
+.modulos__img img {
+    object-fit: cover;
+    width: 100%;
+}
+.modulos__description p{
+   padding: 20px; 
+}
+.modulos__card a{
+    display: block;
+    margin-top:20px ;
+    padding: 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   font-family: "bebasneue";
+   font-size: 30px;
+}
+.about{
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(420px,100%),500px));
+    padding: 20px;
+    justify-content:center;
+    gap: 60px;
+    padding-top: 40px;
+}
+.about h3{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "bebasneue";
+    font-size: 30px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    width: 100%;
+    padding-top:  20px;
+    padding-bottom: 20px;
+}
+.mision,.vision{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 0px 4px gray;
+}
+.about__img{
+    width:100px;
+    max-height: 400px;
+    overflow: hidden;
+}
+.about__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about__description{
+    text-align: justify;
+    margin-top: 20px;
+    padding: 20px;
+}
+#footer {
+    grid-column: 1/2;
+    height: 140px;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-top: 1px solid black;
+}
+#footer .icons img{
+    display: block;
+    width: 200px;
+    height: 50px;
+}
+#footer .icons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 20px;
+}
+#footer p{
+    font-family: "bebasneue";
+    letter-spacing: 2px;
+   font-size: 20px;
+    margin: 5px auto;
+   width: 400px;
+   text-align: center;
+}
+@media (max-width:532px) {
+    #footer .icons{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*---------------------------------- NOTICIAS Y ACTIVIDADES*----------------------------*/
+.noticias__actividades{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(min(500px,100%),1fr));
+gap: 20px;
+padding: 20px;
+align-items: center;
+}
+.noticia img{
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+}
+.noticia__descripcion{
+    text-align: justify;
+    padding: 10px;
+    display: inline-block;
+    width:100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    font-weight: normal;
+    background: rgb(1, 13, 54);
+    color: white;
+} 
+.noticia{
+    box-shadow: 0px 0px 4px black;
+    border-radius:300px;
+}
+.noticia__titulo{
+    font-family: "bebasneue";
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+/*
+-----------------------------------------Agenda Escolar------------------------------
+*/
+.agenda__ingreso{
+
+    
+   display: grid;
+   justify-content: center;
+   grid-template-columns: minmax(min(200px,100%),0.5fr)
+}
+.agenda__form{
+    margin-top: 40px;
+    background: url(../assets/img/Polygon\ Luminary.svg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 16px;
+    box-shadow: 0px 0px 4px black;
+    font-family: 'Trebuchet MS';
+    row-gap: 5px;
+}
+.agenda__img{
+    width: 200px;
+    padding-bottom: 100px;
+}
+.agenda__form img{
+    width: 100%;
+}
+.agenda__form p {
+    font-family: "bebasneue";
+    font-size: 50px;
+    margin-top: 40px;
+margin-bottom: 50px; 
+}
+.agenda__form input[type="text"]{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding:0px 5px;
+} 
+@media (max-width:515px) {
+    .agenda__form p {
+        font-family: "bebasneue";
+        font-size: 35px;
+        margin-top: 40px;
+    margin-bottom: 50px; 
+    }
+    .agenda__img{
+        width: 200px;
+        padding-bottom: 50px;
+    }
+}
+/*-------------------------------------------------------TALLERES -----------------------------*/
+.talleres__contenido{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(900px,100%),1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.video {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-flow:row ;
+    justify-content: center;
+    gap: 20px;
+}
+.video__principal{
+   
+}
+.video__principal h3{
+    font-size: 30px;
+    font-family: "bebasneue";
+    color: white;
+    text-shadow: 1px 1px 2px blue;
+}
+.video__description{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    padding-bottom: 20px;
+    text-align: justify;
+}
+.video__description h4{
+    padding-top:40px;
+    font-size: 20px;
+    color: gold;
+    font-family: "bebasneue";
+}
+.iframe__contenedor{
+    width:560px;
+}
+.video iframe{
+    width: 100%;
+    height: 315px;
+}
+@media (max-width:932px) {
+    .video {
+        padding-left: 40px;
+        padding-right: 40px;
+       
+        display: flex;
+        flex-flow:column ;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .video__principal h3{
+        font-size: 30px;
+        font-family: "bebasneue";
+        color: white;
+        text-shadow: 1px 1px 2px blue;
+        text-align: center;
+    }
+
+}
+@media (max-width:692px) {
+    .iframe__contenedor{
+        width:360px;
+    }
+
+.video iframe{
+    width: 100%;
+    height: 215px;
+}
+.video {
+    padding-left: 20px;
+    padding-right: 20px;
+   
+    display: flex;
+    flex-flow:column ;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+}
+/* ---------------------------------Contacto----------------------------------------*/
+.contacto__title{
+    background: url('../assets/img/institucionJmaFrontal.jpg') ; 
+    height: 200px;
+     width: 100%;
+     background-size: cover;
+     background-position:  -1px;
+     filter:hue-rotate(255deg) brightness(150%);
+     text-align: center;
+     font-family: "bebasneue";
+     color: rgb(255, 255, 255);
+     text-shadow: 2px 2px 1px black;
+     font-size: 60px;
+     line-height:200px ;
+    letter-spacing: 2px;
+     margin-top: 30px;
+     border: none;
+ }
+.contacto__contenido{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(500px,100%),0.1fr));
+    grid-auto-rows: auto;
+  justify-content: center;
+  align-items:start;
+  column-gap: 90px;
+  padding-top: 30px;
+}
+.contacto__tarjeta{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    box-shadow: 0px 0px 4px gray;
+    border-radius: 16px;
+    background: url('../assets/img/Polygon\ Luminary.svg');
+    margin-bottom: 20px;
+}
+.contacto__tarjeta p:first-child {
+    font-family: "bebasneue";
+    font-size: 2rem;
+    color: rgb(165, 20, 20);
+    text-shadow:1px 1px 2px rgb(238, 255, 0) ;
+    padding: 20px 0;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.contacto__tarjeta p:nth-child(2){
+    font-family:'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px white;
+}
+.contacto__tarjeta .contacto__form{
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 20px;
+    padding: 10px;
+
+}
+.contacto__form{
+    width: 400px;
+}
+.contacto__form input{
+    height: 40px;
+    width: 100%;
+}
+.contacto__info{
+    box-shadow: 0px 0px 4px gray;
+    background:url('../assets/img/Polygon\ Luminary.svg');
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    font-weight: bolder;
+    font-family: "bebasneue";
+}
+.contacto__info img{
+    width: 20px;
+}
+.contacto__info--titulo{
+    font-family: "bebasneue";
+    color: rgb(165, 20, 20);
+    text-shadow:1px 1px 2px rgb(238, 255, 0) ;
+    letter-spacing: 1px;
+    font-size:2rem ;
+}
+.contacto__info--tel, .contacto__info--email{
+    display: flex;
+    gap: 10px;
+}
+/*  ---------------------------------------------INICIAR SESION-------------------------------------------------------
+*/
+.sesion{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(500px,100%),1fr)); 
+   
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    padding: 40px;
+}
+.login{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background: url('../assets/img/Polygon\ Luminary.svg');
+    background-repeat: no-repeat;
+   padding:10px;
+   background-size: cover;
+  border-radius: 16px;
+  box-shadow: 0px 0px 4px black;
+
+}
+.login img{
+    
+    width: 50%;
+    height: 278px;
+
+}
+.login form{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    row-gap: 20px;
+    width: 400px;
+    
+}
+.login a{
+    text-align: center;
+    font-size: 1.3rem;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login input, .login a{
+    border-radius: 16px;
+    height: 40px;
+    display: block;
+    width: 80%;
+   
+}
+.login input[type="submit"]{
+    cursor: pointer;
+    margin-bottom:30px ;    
+    width: 40%;
+    border-radius: 2rem;
+    background-color: #00072B;
+    color: white;
+    font-weight: bolder;
+}
+.login input[type="submit"]:hover{
+    color: gold;
+}
+.portadaColegio{
+    
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+.portadaColegio img{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    box-shadow: 0px 0px 4px black;
+}
