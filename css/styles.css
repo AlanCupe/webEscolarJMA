@@ -292,10 +292,7 @@ align-items: center;
     background: rgb(1, 13, 54);
     color: white;
 } */
-.noticia{
-  
-    
-}
+
 .noticias__actividades{
   text-align: justify;   
 }
@@ -394,7 +391,7 @@ form label{
 @keyframes aparition {
     0%{
         opacity: 0;
-        color: rgba(252, 34, 34, 0.805);
+        color: rgba(225, 33, 33, 0.805);
     }
     50%{
         opacity: 0.5;
@@ -422,16 +419,16 @@ form label{
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
-/*
+
 .iframe__contenedor{
     width:560px;
 }
-*/
+
 .video iframe{
     width: 100%;
    
 }
-/*
+
 @media (max-width:932px) {
     .video {
         padding-left: 40px;
@@ -472,12 +469,12 @@ form label{
     align-items: center;
     gap: 20px;
 }
+}
 
-} */
 /* ---------------------------------Contacto----------------------------------------*/
-.contacto__title{
+ .contacto__title{
     background: url('../assets/img/institucionJmaFrontal.jpg') ; 
-    height: 200px;
+    max-height: 12.5rem;
      width: 100%;
      background-size: cover;
      background-position:  -1px;
@@ -486,15 +483,18 @@ form label{
      font-family: "bebasneue";
      color: rgb(255, 255, 255);
      text-shadow: 2px 2px 1px black;
-     font-size: 60px;
+     font-size: 40px;
      line-height:200px ;
     letter-spacing: 2px;
      margin-top: 30px;
      border: none;
  }
+ 
+
+ 
 .contacto__contenido{
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(500px,100%),0.1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(30.25rem,90%),0.1fr));
     grid-auto-rows: auto;
   justify-content: center;
   align-items:start;
@@ -502,6 +502,8 @@ form label{
   padding-top: 30px;
 }
 .contacto__tarjeta{
+    margin-bottom: 2px;
+    
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -534,13 +536,16 @@ form label{
 
 }
 .contacto__form{
-    width: 400px;
+    min-width:80%;
+    
 }
 .contacto__form input{
     height: 40px;
-    width: 100%;
+    max-width: 100%;
 }
 .contacto__info{
+    margin-bottom: 2px;
+    margin-left: 2px;
     box-shadow: 0px 0px 4px gray;
     background:url('../assets/img/Polygon\ Luminary.svg');
     border-radius: 16px;
@@ -568,7 +573,7 @@ form label{
 .sesion{
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(500px,100%),1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(min(500px,96%),1fr)); 
    
     gap: 20px;
     justify-content: center;
@@ -600,7 +605,7 @@ form label{
     flex-flow: column wrap;
     align-items: center;
     row-gap: 20px;
-    width: 400px;
+    width: 90%;
     
 }
 .login a{
