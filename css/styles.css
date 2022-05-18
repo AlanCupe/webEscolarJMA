@@ -421,7 +421,7 @@ form label{
 }
 
 .iframe__contenedor{
-    width:560px;
+    width:100%;
 }
 
 .video iframe{
