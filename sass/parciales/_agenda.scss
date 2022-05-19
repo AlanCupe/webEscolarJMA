@@ -1,0 +1,41 @@
+.agenda{
+    background: url('../assets/img/agendaEscolarBG.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+
+&__form{
+
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left:50px;
+    padding-right: 50px;
+    min-height: 240px;
+    color: #0084FF;
+    text-shadow: 1px 1px 0px rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "compiler";
+    border: 5px solid white;
+
+   box-shadow: 0px 0px 4px gray;
+    border-radius: 16px;
+    background:transparent;
+    background-position: -100px;
+}
+}
+form label{
+    font-size: 1.4rem;
+}
+.form__titulo{
+    
+    
+    padding-top: 1rem;
+}
+.form__img{
+    padding-top:1rem;
+    max-width: 6rem;
+}

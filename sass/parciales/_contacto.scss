@@ -1,0 +1,99 @@
+.contacto{
+
+&__title{
+    background: url('../assets/img/institucionJmaFrontal.jpg') ; 
+    max-height: 12.5rem;
+     width: 100%;
+     background-size: cover;
+     background-position:  -1px;
+     filter:hue-rotate(255deg) brightness(150%);
+     text-align: center;
+     font-family: "bebasneue";
+     color: rgb(255, 255, 255);
+     text-shadow: 2px 2px 1px black;
+     font-size: 40px;
+     line-height:200px ;
+    letter-spacing: 2px;
+     margin-top: 30px;
+     border: none;
+ }
+ 
+
+ 
+&__contenido{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30.25rem,90%),0.1fr));
+    grid-auto-rows: auto;
+  justify-content: center;
+  align-items:start;
+  column-gap: 90px;
+  padding-top: 30px;
+}
+&__tarjeta{
+    margin-bottom: 2px;
+    
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    box-shadow: 0px 0px 4px gray;
+    border-radius: 16px;
+    background: url('../assets/img/Polygon\ Luminary.svg');
+    margin-bottom: 20px;
+}
+&__tarjeta p:first-child {
+    font-family: "bebasneue";
+    font-size: 2rem;
+    color: rgb(165, 20, 20);
+    text-shadow:1px 1px 2px rgb(238, 255, 0) ;
+    padding: 20px 0;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+&__tarjeta p:nth-child(2){
+    font-family:'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px white;
+}
+&__tarjeta .contacto__form{
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 20px;
+    padding: 10px;
+
+}
+&__form{
+    min-width:80%;
+    
+}
+&__form input{
+    height: 40px;
+    max-width: 100%;
+}
+&__info{
+    margin-bottom: 2px;
+    margin-left: 2px;
+    box-shadow: 0px 0px 4px gray;
+    background:url('../assets/img/Polygon\ Luminary.svg');
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    font-weight: bolder;
+    font-family: "bebasneue";
+}
+&__info img{
+    width: 20px;
+}
+&__info--titulo{
+    font-family: "bebasneue";
+    color: rgb(165, 20, 20);
+    text-shadow:1px 1px 2px rgb(238, 255, 0) ;
+    letter-spacing: 1px;
+    font-size:2rem ;
+}
+&__info--tel, .contacto__info--email{
+    display: flex;
+    gap: 10px;
+}
+}

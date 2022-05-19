@@ -1,0 +1,28 @@
+#footer {
+    grid-column: 1/2;
+    height: 140px;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-top: 1px solid black;
+
+.icons img{
+    display: block;
+    width: 200px;
+    height: 50px;
+}
+.icons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 20px;
+}
+p{
+    font-family: "bebasneue";
+    letter-spacing: 2px;
+   font-size: 20px;
+    margin: 5px auto;
+   max-width: 400px;
+   text-align: center;
+}
+}

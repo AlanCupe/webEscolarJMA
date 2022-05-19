@@ -1,0 +1,56 @@
+.video__description{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    padding-bottom: 20px;
+    text-align: justify;
+
+
+h4{
+    align-self: flex-start;
+    padding-top:40px;
+    font-size: 20px;
+    color: gold;
+    font-family: "bebasneue";
+    animation: aparition 2s linear;
+}
+}
+@keyframes aparition {
+    0%{
+        opacity: 0;
+        color: rgba(225, 33, 33, 0.805);
+    }
+    50%{
+        opacity: 0.5;
+        color: #0084FF;
+    }
+    100%{
+        opacity: 1;
+        color: gold;
+    }
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.contenido__talleres h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(255, 234, 0);
+    text-shadow: 2px 2px 5px rgb(125, 175, 255);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.iframe__contenedor{
+    width:100%;
+}
+
+.video iframe{
+    width: 100%;
+   
+}
