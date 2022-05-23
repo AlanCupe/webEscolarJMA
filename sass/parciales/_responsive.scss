@@ -1,7 +1,6 @@
 @media (max-width:532px) {
     #footer .icons{
-        display: flex;
-        flex-flow: column wrap;
+        @include flexColumn;
         justify-content: center;
         align-items: center;
     }

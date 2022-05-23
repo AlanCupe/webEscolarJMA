@@ -7,21 +7,20 @@
 
 &__form{
 
-    display: flex;
-    flex-flow:column wrap;
+    @include flexColumn;
     justify-content: center;
     align-items: center;
     padding-left:50px;
     padding-right: 50px;
     min-height: 240px;
-    color: #0084FF;
+    color:$blue;
     text-shadow: 1px 1px 0px rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: bold;
     font-family: "compiler";
     border: 5px solid white;
 
-   box-shadow: 0px 0px 4px gray;
+   @include sombras;
     border-radius: 16px;
     background:transparent;
     background-position: -100px;

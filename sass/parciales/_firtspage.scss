@@ -54,8 +54,7 @@ h2 {
     font-size: 2rem;
     color: rgb(255, 234, 0);
     text-shadow: 2px 2px 5px rgb(125, 175, 255);
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    @include bgGrandiente;
 }
 }
 
@@ -96,12 +95,11 @@ h2 {
     justify-content: center;
     margin-bottom: 2rem;
     .card {
-        display: flex;
-        flex-flow: column wrap;
+        @include flexColumn;
         justify-content: start;
         align-items: center;
         border: 1px solid gray;
-        box-shadow: 0px 0px 4px gray;
+        @include sombras;
         border-radius: 16px;
         height: 230px;
         
@@ -125,7 +123,7 @@ h2 {
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0px 0px 4px gray;
+    @include sombras;
     overflow: hidden;
     height: auto;
     border-radius:1rem ;
@@ -169,8 +167,7 @@ h2 {
     color: rgb(255, 255, 255);
     font-family: "bebasneue";
     font-size: 30px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    @include bgGrandiente;
     width: 100%;
     padding-top:  20px;
     padding-bottom: 20px;
@@ -181,7 +178,7 @@ h2 {
     align-items: center;
     overflow: hidden;
     border-radius: 16px;
-    box-shadow: 0px 0px 4px gray;
+    @include sombras;
 }
 .about__img{
     width:100px;

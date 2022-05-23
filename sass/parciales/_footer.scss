@@ -12,8 +12,7 @@
     height: 50px;
 }
 .icons{
-    display: flex;
-    flex-flow: row wrap;
+    @include flexRow;
     justify-content: flex-end;
     gap: 20px;
 }

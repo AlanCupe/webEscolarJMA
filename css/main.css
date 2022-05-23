@@ -454,7 +454,6 @@ form label {
 .portadaColegio {
   height: 100%;
   width: 100%;
-  background-color: aqua;
 }
 .portadaColegio img {
   width: 100%;
@@ -479,22 +478,30 @@ form label {
 
 .noticia img {
   max-width: 100%;
-  height: auto;
+  max-height: 20rem;
   margin-top: 5px;
+  object-fit: cover;
+}
+
+.video h3 {
+  font-weight: bold;
+  color: #0084FF;
 }
 
 .video__description {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "BebasNeue-Regular";
+  font-size: 1.1rem;
   padding-bottom: 20px;
   text-align: justify;
 }
 .video__description h4 {
   align-self: flex-start;
   padding-top: 40px;
-  font-size: 20px;
-  color: gold;
+  font-size: 1.6rem;
+  color: #0084FF;
   font-family: "bebasneue";
   animation: aparition 2s linear;
+  font-weight: bold;
 }
 
 @keyframes aparition {
@@ -508,7 +515,7 @@ form label {
   }
   100% {
     opacity: 1;
-    color: gold;
+    color: rgb(33, 30, 11);
   }
 }
 .img-fluid {
@@ -520,7 +527,7 @@ form label {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-family: "Lucida Sans";
+  font-family: sans-serif;
   font-weight: bold;
   font-size: 2rem;
   color: rgb(255, 234, 0);

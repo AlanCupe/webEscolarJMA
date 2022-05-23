@@ -9,15 +9,15 @@
       font-size: 30px;
       color: white;
       text-align: center;
-      background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      @include bgGrandiente;
   } 
 }
 .noticia img{
     
     max-width: 100%;
-    height: auto;;
+    max-height:20rem;
     margin-top: 5px;
+    object-fit: cover;
 }
 
 
