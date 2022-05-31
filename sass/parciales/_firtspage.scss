@@ -1,8 +1,6 @@
-:root{
-    --primary:#0084FF;
-}
+
 .text-primary{
-    color: var(--primary) !important;
+    color: #0084FF !important;
 }
 * {
     margin: 0;
@@ -54,7 +52,7 @@ h2 {
     font-size: 2rem;
     color: rgb(255, 234, 0);
     text-shadow: 2px 2px 5px rgb(125, 175, 255);
-    @include bgGrandiente;
+    @include bgGrandiente();
 }
 }
 
