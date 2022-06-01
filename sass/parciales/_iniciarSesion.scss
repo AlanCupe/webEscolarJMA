@@ -25,8 +25,8 @@
 img{
     
     width: 50%;
-    height: 278px;
-
+    height: auto;
+    margin: 20px 0;
 }
 form{
     display: flex;
@@ -38,7 +38,7 @@ form{
 }
 a{
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1 rem;
     color: red;
     font-weight: bold;
     text-decoration: none;
@@ -50,14 +50,18 @@ input,a{
     width: 80%;
    
 }
+#user, #password{
+    padding-left: 12px;
+}
 input[type="submit"]{
     cursor: pointer;
     margin-bottom:30px ;    
-    width: 40%;
+    width: 80%;
     border-radius: 2rem;
     background-color: #00072B;
     color: white;
     font-weight: bolder;
+    
 }
 input[type="submit"]:hover{
     color: gold;
