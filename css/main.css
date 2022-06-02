@@ -13,7 +13,11 @@ nav {
   box-shadow: 0px 10px 40px rgb(219, 217, 217);
   font-family: "bebasneue";
   font-size: 1.3rem;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.871);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .nabvar-brand {
@@ -69,6 +73,7 @@ ul {
 }
 
 .contenido {
+  margin-top: 130px;
   grid-column: 1/2;
 }
 .contenido h2 {
@@ -259,10 +264,16 @@ ul {
   text-align: center;
 }
 
+.contenido_agenda {
+  grid-column: 1/2;
+  margin-top: 130px;
+}
+
 .agenda {
   background: url("../assets/img/agendaEscolarBG.avif");
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 40rem;
 }
 .agenda__form {
   display: flex;
@@ -522,6 +533,9 @@ form label {
   height: auto;
 }
 
+.contenido__talleres {
+  margin-top: 130px;
+}
 .contenido__talleres h2 {
   text-align: center;
   padding-top: 20px;
@@ -555,5 +569,10 @@ form label {
   .agenda__form {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+@media (max-width: 365px) {
+  .contenido, .contenido_agenda, .contenido__talleres {
+    margin-top: 180px;
   }
 }/*# sourceMappingURL=main.css.map */

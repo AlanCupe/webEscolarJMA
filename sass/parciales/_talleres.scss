@@ -42,7 +42,9 @@ h4{
     max-width: 100%;
     height: auto;
 }
-.contenido__talleres h2{
+.contenido__talleres{
+    margin-top: 130px;
+& h2{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -52,6 +54,7 @@ h4{
     color: rgb(255, 234, 0);
     text-shadow: 2px 2px 5px rgb(125, 175, 255);
     @include bgGrandiente;
+}
 }
 
 .iframe__contenedor{

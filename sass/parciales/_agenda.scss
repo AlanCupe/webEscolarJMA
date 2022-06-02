@@ -1,8 +1,13 @@
+.contenido_agenda{
+    grid-column: 1/2;
+    margin-top: 130px;
+}
 .agenda{
+    
     background: url('../assets/img/agendaEscolarBG.avif');
     background-repeat: no-repeat;
     background-size: cover;
-    
+    min-height:40rem;
     
 
 &__form{

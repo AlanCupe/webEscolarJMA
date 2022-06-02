@@ -11,3 +11,8 @@
         padding-right: 10px;
     }
 }
+@media(max-width:365px){
+    .contenido , .contenido_agenda, .contenido__talleres{
+        margin-top: 180px;
+    }
+}
